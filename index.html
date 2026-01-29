@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>cs.janektech.pl</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #e8e8e8;
+      font-family: Arial, Helvetica, sans-serif; /* more readable + MOTD-safe */
+    }
+
+    /* Background image (MOTD-safe) */
+    body {
+      background-image: url("bg.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-attachment: fixed;
+    }
+
+    /* Green tint overlay (MOTD-safe, no fancy blend modes) */
+    #overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 90, 0, 0.28);
+      z-index: 0;
+    }
+
+    /* Page container */
+    .layout {
+      position: relative;
+      z-index: 1;
+      max-width: 1100px;
+      margin: 28px auto;
+      padding: 0 18px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    /* Card look (simple, MOTD-safe) */
+    .card {
+      background: #1f2726;
+      border: 2px solid #8a8a8a;
+      box-shadow: 0 0 0 4px rgba(0,0,0,0.35);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      padding: 14px;
+    }
+
+    .sidebar h2 {
+      margin: 0 0 12px;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #f2f2f2;
+    }
+
+    .img-box {
+      width: 160px;
+      margin: 0 auto 10px;
+      padding: 10px;
+      background: #121716;
+      border: 2px solid #6f6f6f;
+      text-align: center;
+    }
+
+    .img-box img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .img-text {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #cfcfcf;
+      letter-spacing: 1px;
+    }
+
+    .side-link {
+      display: block;
+      margin: 10px auto 0;
+      padding: 10px 12px;
+      width: 180px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      color: #1f2726;
+      background: #c7c7c7;
+      border: 2px solid #101514;
+    }
+
+    .side-link:hover {
+      background: #d6d6d6;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      padding: 18px 28px 22px;
+    }
+
+    .title {
+      margin: 6px 0 12px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .sub {
+      text-align: center;
+      margin: 0 0 14px;
+      color: #d7d7d7;
+      font-size: 13px;
+    }
+
+    .logo {
+      display: block;
+      margin: 16px auto 12px;
+      width: 240px;
+      height: auto;
+    }
+
+    .info {
+      margin: 18px auto 0;
+      padding: 14px 16px;
+      width: 80%;
+      background: #111615;
+      border: 2px solid #6f6f6f;
+      text-align: center;
+    }
+
+    .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #cfcfcf;
+    }
+
+    .addr {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 800;
+      color: #ff3b3b;
+      font-family: "Courier New", monospace;
+    }
+
+    .hint {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #cfcfcf;
+    }
+
+    /* Mobile fallback */
+    @media (max-width: 900px) {
+      .layout { flex-direction: column; }
+      .sidebar { width: auto; }
+      .side-link { width: auto; }
+      .info { width: auto; }
+      .main { padding: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="overlay"></div>
+
+  <div class="layout">
+    <div class="sidebar card">
+      <h2>Menu</h2>
+
+      <div class="img-box">
+        <img src="source.jpg" alt="CS:S">
+        <div class="img-text">CS:S Logo</div>
+      </div>
+
+      <a class="side-link" href="https://janektech.pl">Visit janektech.pl</a>
+    </div>
+
+    <div class="main card">
+      <div class="title">Welcome to JanekTech Counter-Strike: Source</div>
+      <div class="sub">Custom maps • Tunnels • Fair play</div>
+
+
+      <div class="info">
+        <div class="label">Connect address</div>
+        <div class="addr">rating-slides.gl.at.ply.gg:55400</div>
+        <div class="hint">Open console and type: <b>connect rating-slides.gl.at.ply.gg:55400</b></div>
+        <div class="label">online:</div>
+        <div class="addr">its online if my mom hasnt turned my pc off :)</div>
+        <div class="hint">join my dc and ask me to turn it on<b> https://discord.gg/84MZrTJ4</b></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
